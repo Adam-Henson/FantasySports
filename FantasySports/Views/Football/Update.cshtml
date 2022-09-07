@@ -1,0 +1,42 @@
+﻿
+@using CRUDApp.Models
+
+@{
+    string pageType = Model.CurrentTeam.TeamId > 0 ? "Update Team" : "Create Team";
+
+    ViewData["Title"] = $"CRUD Applications | {pageType}";
+}
+
+<form action="~/Football/Index" method="post">
+    <div>
+        <div class="row">
+            <div class="col-6 offset-3 text-center">
+                <h1 class="display-4" style="margin: 20px 0px;">@pageType</h1>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 offset-md-3 form-group">
+                <label>Versus: </label>
+                <input type="text" class="form-control" name="versus" value="@Model.CurrentTeam.Versus" />
+            </div>
+            <div class="col-md-3 form-group">
+                <label>Total Points: </label>
+                <input type="number" class="form-control" name="totalPoints" value="@Model.CurrentTeam.TotalPoints" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Season Record: </label>
+                <input type="text" class="form-control" name="seasonRecord" value="@Model.CurrentTeam.SeasonRecord" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3">
+                <button type="button" class="btn btn-secondary" onclick="location.href = '/Football/Index'">CANCEL</button>
+                <button type="submit" class="btn btn-primary">SAVE TEAM</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="teamID" value="@Model.CurrentTeam.TeamId" />
+</form>
+
