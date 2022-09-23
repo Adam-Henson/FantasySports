@@ -1,0 +1,104 @@
+﻿@using CRUDApp.Models
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <script type="text/javascript">
+    function openLocation(url) {
+        window.location.href = url;
+    }
+</script>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="Home-body-image">
+    <header>
+        <div class="Home-header">
+            <h2>Welcome to the twist on Fantasy Football!</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="Home-explanation">
+            <p>In this format, there will be five people. Each person picks one team. Each player will attempt to guess how many points their team will score that week. You will score more based on how close your predictions are.</p>
+            <p>It is up to the players to decide on what is at stake.</p>
+            <p>Points go as follows. </p>
+            <ul>
+                Within 3 points = 5 points
+            </ul>
+            <ul>
+                Within 10 points = 3 points
+            </ul>
+            <ul>
+                Within 14 points = 1 point
+            </ul>
+            <p>The person with the most points at the end of the season wins.</p>
+            <button onclick="openLocation('/MergeModel/FantasyGame')">Team Selection</button>
+            
+        </div>
+    </header>
+</body>
+<style>
+    *, *::before, *::after {
+    font-family: sans-serif;
+    font-size: 16px;
+    }
+
+    .Home-body-image {
+        background-image: url(https://th.bing.com/th/id/OIP.RVLE8Pow7MvbWkgmHfeSUgHaDn?w=334&h=171&c=7&r=0&o=5&pid=1.7);
+    height: 100vh;
+    width: 100vw;
+    }
+
+    .Home-header {
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px;
+    border: 100px;
+    margin-top: 100px;
+    }
+
+    .Main-page {
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    }
+
+    .main-btn {
+    padding: 2rem;
+    border: 0;
+    border-radius: 50%;
+    font-size: 20rem;
+    }
+
+    .Home-explanation {
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-top: 100px;
+    }
+
+    .Update-explanation {
+    text-align: center;
+    color: white;
+    background-color: black;
+    }
+
+    .body {
+    background-color: black;
+    color: white;
+    }
+
+    .Update-table {
+    width: 100%;
+    height: 100px;
+    color: white;
+    }
+
+    .Update-Main {
+    color: white;
+    }
+</style>
+</html>

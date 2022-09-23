@@ -1,0 +1,49 @@
+﻿@using CRUDApp.Models
+
+@{
+    string pageType = Model.CurrentTeam.TeamId > 0 ? "Update Team" : "Create Team";
+
+    ViewData["Title"] = $"CRUD Applications | {pageType}";
+}
+
+<form action="~/ArizonaCardinals/Index" method="post">
+    <div>
+        <div class="row">
+            <div class="col-6 offset-3 text-center">
+                <h1 class="display-4" style="margin: 20px 0px;">@pageType</h1>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 offset-md-3 form-group">
+                <label>My Team: </label>
+                <input type="text" class="form-control" name="myTeam" value="@Model.CurrentTeam.MyTeam" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 offset-md-3 form-group">
+                <label>Versus: </label>
+                <input type="text" class="form-control" name="versus" value="@Model.CurrentTeam.Versus" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 offset-md-3 form-group">
+                <label>Score: </label>
+                <input type="text" class="form-control" name="score" value="@Model.CurrentTeam.Score" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 offset-md-3 form-group">
+                <label>Season Record: </label>
+                <input type="text" class="form-control" name="seasonRecord" value="@Model.CurrentTeam.SeasonRecord" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3">
+                <button type="button" class="btn btn-secondary" onclick="location.href = '/ArizonaCardinals/Index'">CANCEL</button>
+                <button type="submit" class="btn btn-primary">SAVE TEAM</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="teamID" value="@Model.CurrentTeam.TeamId" />
+</form>
+

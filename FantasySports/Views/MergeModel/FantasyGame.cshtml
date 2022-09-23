@@ -1,0 +1,381 @@
+﻿@using CRUDApp.Models
+
+@{
+    ViewData["Title"] = "CRUD Applications | Game";
+}
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript">
+    function openLocation(url) {
+        window.location.href = url;
+    }
+
+    function Week1() {
+        var element = document.querySelectorAll(".week1").forEach(element => element.classList.remove("week1"));
+    }
+
+    function Week2() {
+        var element = document.querySelectorAll(".week2").forEach(element => element.classList.remove("week2"));
+    }
+
+    function Week3() {
+        var element = document.querySelectorAll(".week3").forEach(element => element.classList.remove("week3"));
+    }
+
+    function Week4() {
+        var element = document.querySelectorAll(".week4").forEach(element => element.classList.remove("week4"));
+    }
+
+    function Week5() {
+        var element = document.querySelectorAll(".week5").forEach(element => element.classList.remove("week5"));
+    }
+
+    function Week6() {
+        var element = document.querySelectorAll(".week6").forEach(element => element.classList.remove("week6"));
+    }
+
+    function GetPoints() {
+        $("hdnPoints").val();
+        window.location.href = "/MergeModel/Points/";
+    }
+</script>
+<style>
+    *, *::before, *::after {
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    .body-image {
+        background-image: url(https://th.bing.com/th/id/OIP.RVLE8Pow7MvbWkgmHfeSUgHaDn?w=334&h=171&c=7&r=0&o=5&pid=1.7);
+        height: 100vh;
+        width: 100vw;
+    }
+    .table {
+        color: lightblue;
+        background-color: black;
+        table-layout: fixed;
+        margin-top: 120px;
+        margin-right: 50px;
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .body {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .points {
+        background-color: black;
+        color: lightblue;
+        text-align: center;
+    }
+    .header {
+        text-align: center;
+    }
+    .columns {
+        text-align: center;
+    }
+    .button {
+        position: absolute;
+        justify-content: center;
+        justify-items: center;
+        margin-top: 15px;
+    }
+    .teams {
+        position: absolute;
+        justify-content: center;
+        justify-items: center;
+        margin-top: 50px;
+        color: white;
+        background-color: black;
+        border: solid red;
+    }
+    .bottom-text {
+        position: absolute;
+        justify-content: center;
+        justify-items: center;
+        transform: translateY(975px);
+    }
+    .score {
+        color: white;
+    }
+    #blur {
+        color: transparent;
+        text-shadow: 0 0 8px #000;
+    }
+    .centered{
+        text-align: center;
+        vertical-align: middle;
+    }
+    .bottom-button{
+
+    } 
+    .week1{
+        color: transparent;
+    }
+    .week2{
+        color: transparent;
+    }
+    .week3{
+        color: transparent;
+    }
+    .week4{
+        color: transparent;
+    }
+    .week5{
+        color: transparent;
+    }
+    .week6{
+        color: transparent;
+    }
+    .week7{
+        color: transparent;
+    }
+    .week8{
+        color: transparent;
+    }
+    .week9{
+        color: transparent;
+    }
+    .week10{
+        color: transparent;
+    }
+    .week11{
+        color: transparent;
+    }
+    .week12{
+        color: transparent;
+    }
+    .week13{
+        color: transparent;
+    }
+    .week14{
+        color: transparent;
+    }
+    .week15{
+        color: transparent;
+    }
+    .week16{
+        color: transparent;
+    }
+    .week17{
+        color: transparent;
+    }
+    .week18{
+        color: transparent;
+    }
+    
+</style>
+
+<div class="body-image">
+
+    <div class="body">
+        <button class="button" onclick="openLocation('/MergeModel')">Introduction</button>
+
+        <h1 class="teams">Teams</h1>
+        <div>
+            <div>
+                <form class="" action="FantasyGame" method="post">
+                    <table class="table">
+                        <tr>
+                            <th></th>
+                            <th><button type="button" onclick="Week1()">Week 1</button></th>
+                            <th><button type="button" onclick="Week2()">Week 2</button></th>
+                            <th><button type="button" onclick="Week3()">Week 3</button></th>
+                            <th><button type="button" onclick="Week4()">Week 4</button></th>
+                            <th><button type="button" onclick="Week5()">Week 5</button></th>
+                            <th><button type="button" onclick="Week6()">Week 6</button></th>
+                        </tr>
+
+                        @foreach (var cardinals in Model.Cardinals)
+                        {
+                            <tr class="columns">
+                                <th>Player1</th>
+                                <th id="week1" class="week1">@cardinals.Week1Score</th>
+                                <th id="week2" class="week2">@cardinals.Week2Score</th>
+                                <th id="week3" class="week3">@cardinals.Week3Score</th>
+                                <th id="week4" class="week4">@cardinals.Week4Score</th>
+                                <th id="week5" class="week5">@cardinals.Week5Score</th>
+                                <th id="week6" class="week6">@cardinals.Week6Score</th>
+                                <th class="centered" rowspan="2">Arizona Cardinals</th>
+                            </tr>
+                        }
+
+                        <tr class="columns">
+                            <th>Guesses</th>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                        </tr>
+                        <tr class="columns">
+                            <th>Points</th>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                        </tr>
+                        @foreach (var cowboys in Model.Cowboys)
+                        {
+                            <tr class="columns">
+                                <th>Player2</th>
+                                <th id="week1" class="week1">@cowboys.Week1Score</th>
+                                <th id="week2" class="week2">@cowboys.Week2Score</th>
+                                <th id="week3" class="week3">@cowboys.Week3Score</th>
+                                <th id="week4" class="week4">@cowboys.Week4Score</th>
+                                <th id="week5" class="week5">@cowboys.Week5Score</th>
+                                <th id="week6" class="week6">@cowboys.Week6Score</th>
+                                <th class="centered" rowspan="2">Dallas Cowboys</th>
+                            </tr>
+                        }
+                        
+                        <tr class="columns">
+                            <th>Guesses</th>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                        </tr>
+                        <tr class="columns">
+                            <th>Points</th>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                        </tr>
+
+                        @foreach (var dolphins in Model.Dolphins)
+                        {
+                            <tr class="columns">
+                                <th>Player3</th>
+                                <th id="week1" class="week1">@dolphins.Week1Score</th>
+                                <th id="week2" class="week2">@dolphins.Week2Score</th>
+                                <th id="week3" class="week3">@dolphins.Week3Score</th>
+                                <th id="week4" class="week4">@dolphins.Week4Score</th>
+                                <th id="week5" class="week5">@dolphins.Week5Score</th>
+                                <th id="week6" class="week6">@dolphins.Week6Score</th>
+                                <th class="centered" rowspan="2">Miami Dolphins</th>
+                            </tr>
+                        }
+
+                        <tr class="columns">
+                            <th>Guesses</th>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"><button asp-controller="" asp-action="" asp-route-id="playerGuess" type="button"/></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                        </tr>
+                        <tr class="columns">
+                            <th>Points</th>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                        </tr>
+
+                        @foreach (var chiefs in Model.Chiefs)
+                        {
+                            <tr class="columns">
+                                <th>Player4</th>
+                                <th id="week1" class="week1">@chiefs.Week1Score</th>
+                                <th id="week2" class="week2">@chiefs.Week2Score</th>
+                                <th id="week3" class="week3">@chiefs.Week3Score</th>
+                                <th id="week4" class="week4">@chiefs.Week4Score</th>
+                                <th id="week5" class="week5">@chiefs.Week5Score</th>
+                                <th id="week6" class="week6">@chiefs.Week6Score</th>
+                                <th class="centered" rowspan="2">Kansas City Chiefs</th>
+                            </tr>
+                        }
+
+                        <tr class="columns">
+                            <th>Guesses</th>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                        </tr>
+                        <tr class="columns">
+                            <th>Points</th>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                        </tr>
+
+                        @foreach (var eagles in Model.Eagles)
+                        {
+                            <tr class="columns">
+                                <th>Player5</th>
+                                <th id="week1" class="week1">@eagles.Week1Score</th>
+                                <th id="week2" class="week2">@eagles.Week2Score</th>
+                                <th id="week3" class="week3">@eagles.Week3Score</th>
+                                <th id="week4" class="week4">@eagles.Week4Score</th>
+                                <th id="week5" class="week5">@eagles.Week5Score</th>
+                                <th id="week6" class="week6">@eagles.Week6Score</th>
+                                <th class="centered" rowspan="2">Philidelphia Eagles</th>
+                            </tr>
+                        }
+
+                        <tr class="columns">
+                            <th>Guesses</th>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                            <td><input type="number" name="playerGuess" placeholder="Guess"></td>
+                        </tr>
+                        <tr class="columns">
+                            <th>Points</th>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                            <td><input type="number" name="points" placeholder="Points"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="bottom-text">
+            <div style="display: span;" class="header">
+                <div class="score"><h3>Score</h3></div>
+                <span><input type="number" placeholder="Player 1 Total Points" /></span>
+                <span><input type="number" placeholder="Player 2 Total Points" /></span>
+                <span><input type="number" placeholder="Player 3 Total Points" /></span>
+                <span><input type="number" placeholder="Player 4 Total Points" /></span>
+                <span><input type="number" placeholder="Player 5 Total Points" /></span>
+                <button class="bottom-button" onclick="openLocation('/MergeModel/week7through12')">Week 7-12</button>
+            </div>
+            <div class="points">
+                <p>Points go as follows:</p>
+                <div>Within 3 points = 5 points</div>
+                <div>Within 10 points = 3 points</div>
+                <div>Within 14 points = 1 point</div>
+            </div>
+        </div>
+    </div>
+</div>
