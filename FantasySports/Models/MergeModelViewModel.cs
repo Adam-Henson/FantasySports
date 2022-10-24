@@ -11,7 +11,7 @@ namespace FantasySports.Models
 {
     public class MergeModelViewModel
     {
-        private MergeModelRepository _repo;
+        private FantasyFootballRepository _repo;
         public List<_49Ers> _49Ers { get; set; }
         public List<Bears> Bears { get; set; }
         public List<Bengals> Bengals { get; set; }
@@ -79,131 +79,131 @@ namespace FantasySports.Models
 
         public MergeModelViewModel(FantasySportsContext context)
         {
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             _49Ers = Get_49Ers();
             Current_49Ers = _49Ers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Bears = GetBears();
             CurrentBears = Bears.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Bengals = GetBengals();
             CurrentBengals = Bengals.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Bills = GetBills();
             CurrentBills = Bills.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Broncos = GetBroncos();
             CurrentBroncos = Broncos.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Browns = GetBrowns();
             CurrentBrowns = Browns.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Buccaneers = GetBuccaneers();
             CurrentBuccaneers = Buccaneers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Cardinals = GetCardinals();
             CurrentCardinals = Cardinals.FirstOrDefault();
             
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Chargers = GetChargers();
             CurrentChargers = Chargers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Chiefs = GetChiefs();
             CurrentChiefs = Chiefs.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Colts = GetColts();
             CurrentColts = Colts.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Commanders = GetCommanders();
             CurrentCommanders = Commanders.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Cowboys = GetCowboys();
             CurrentCowboys = Cowboys.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Dolphins = GetDolphins();
             CurrentDolphins = Dolphins.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Eagles = GetEagles();
             CurrentEagles = Eagles.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Falcons = GetFalcons();
             CurrentFalcons = Falcons.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Giants = GetGiants();
             CurrentGiants = Giants.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Jaguars = GetJaguars();
             CurrentJaguars = Jaguars.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Jets = GetJets();
             CurrentJets = Jets.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Lions = GetLions();
             CurrentLions = Lions.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Packers = GetPackers();
             CurrentPackers = Packers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Panthers = GetPanthers();
             CurrentPanthers = Panthers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Patriots = GetPatriots();
             CurrentPatriots = Patriots.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Raiders = GetRaiders();
             CurrentRaiders = Raiders.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Rams = GetRams();
             CurrentRams = Rams.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Ravens = GetRavens();
             CurrentRavens = Ravens.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Saints = GetSaints();
             CurrentSaints = Saints.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Seahawks = GetSeahawks();
             CurrentSeahawks = Seahawks.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Steelers = GetSteelers();
             CurrentSteelers = Steelers.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Texans = GetTexans();
             CurrentTexans = Texans.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Titans = GetTitans();
             CurrentTitans = Titans.FirstOrDefault();
 
-            _repo = new MergeModelRepository(context);
+            _repo = new FantasyFootballRepository(context);
             Vikings = GetVikings();
             CurrentVikings = Vikings.FirstOrDefault();
 
