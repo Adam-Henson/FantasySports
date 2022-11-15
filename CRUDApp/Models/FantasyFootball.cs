@@ -42,7 +42,6 @@ namespace FantasySports.Models
     }
     public class FantasyFootball
     {
-        public int playerGuess { get; set; }
         public int TeamId { get; set; }
         public int? Week1Score { get; set; }
         public int? Week2Score { get; set; }
@@ -62,5 +61,7 @@ namespace FantasySports.Models
         public int? Week16Score { get; set; }
         public int? Week17Score { get; set; }
         public int? Week18Score { get; set; }
+        public int? PlayerGuess { get; set; }
+        public int? PlayerGuessScore { get; set; }
     }
 }
