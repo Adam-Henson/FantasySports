@@ -5,7 +5,15 @@ using System.Reflection;
 
 namespace FantasySports.Models
 {
-    public enum Team
+    public enum PlayerID
+    {
+        player1 = 1,
+        player2 = 2,
+        player3 = 3,
+        player4 = 4,
+        player5 = 5
+    }
+    public enum TeamID
     {
         _49Ers = 1,
         Bears = 2,
