@@ -29,8 +29,7 @@ namespace CRUDApp.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=FantasySports;Trusted_Connection=True;");
+
             }
         }
 
@@ -63,6 +62,46 @@ namespace CRUDApp.Context
             modelBuilder.Entity<FantasyFootball>(entity =>
             {
                 entity.HasKey(e => e.TeamId);
+
+                entity.Property(e => e.Week1Points).HasColumnName("Week 1 Points");
+
+                entity.Property(e => e.Week2Points).HasColumnName("Week 2 Points");
+
+                entity.Property(e => e.Week3Points).HasColumnName("Week 3 Points");
+
+                entity.Property(e => e.Week4Points).HasColumnName("Week 4 Points");
+
+                entity.Property(e => e.Week5Points).HasColumnName("Week 5 Points");
+
+                entity.Property(e => e.Week6Points).HasColumnName("Week 6 Points");
+
+                entity.Property(e => e.Week7Points).HasColumnName("Week 7 Points");
+
+                entity.Property(e => e.Week8Points).HasColumnName("Week 8 Points");
+
+                entity.Property(e => e.Week9Points).HasColumnName("Week 9 Points");
+
+                entity.Property(e => e.Week10Points).HasColumnName("Week 10 Points");
+
+                entity.Property(e => e.Week11Points).HasColumnName("Week 11 Points");
+
+                entity.Property(e => e.Week12Points).HasColumnName("Week 12 Points");
+
+                entity.Property(e => e.Week13Points).HasColumnName("Week 13 Points");
+
+                entity.Property(e => e.Week14Points).HasColumnName("Week 14 Points");
+
+                entity.Property(e => e.Week15Points).HasColumnName("Week 15 Points");
+
+                entity.Property(e => e.Week16Points).HasColumnName("Week 16 Points");
+
+                entity.Property(e => e.Week17Points).HasColumnName("Week 17 Points");
+
+                entity.Property(e => e.Week18Points).HasColumnName("Week 18 Points");
+
+                entity.Property(e => e.PlayerPoints).HasColumnName("Player Points");
+
+                entity.Property(e => e.PlayerGuess).HasColumnName("Player Guess");
 
                 entity.ToTable("FantasyFootball");
             });

@@ -48,11 +48,11 @@ namespace FantasySports.Controllers
             return View(model);
         }
 
-        public IActionResult Points()
+        public IActionResult Points(int playerGuess, int weeklyScore)
         {
             FantasyFootballViewModel model = new FantasyFootballViewModel(_context);
 
-            model.GetPoints();
+            model.GetPoints(playerGuess, weeklyScore);
 
             return View("FantasyGame", model);
         }

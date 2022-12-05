@@ -36,7 +36,7 @@
 
     function GetPoints() {
         $("hdnPoints").val();
-        window.location.href = "/MergeModel/Points/";
+        window.location.href = "/FantasyFootball/Points/";
     }
 </script>
 <style>
@@ -176,7 +176,7 @@
 <div class="body-image">
 
     <div class="body">
-        <button class="button" onclick="openLocation('/MergeModel')">Introduction</button>
+        <button class="button" onclick="openLocation('/FantasyFootball')">Introduction</button>
 
         <h1 class="teams">Teams</h1>
         <div>
@@ -193,16 +193,16 @@
                             <th><button type="button" onclick="Week6()">Week 6</button></th>
                         </tr>
 
-                        @foreach (var cardinals in Model.Cardinals)
+                        @foreach (FantasyFootball teamId in Model.CurrentTeam)
                         {
                             <tr class="columns">
                                 <th>Player1</th>
-                                <th id="week1" class="week1">@cardinals.Week1Score</th>
-                                <th id="week2" class="week2">@cardinals.Week2Score</th>
-                                <th id="week3" class="week3">@cardinals.Week3Score</th>
-                                <th id="week4" class="week4">@cardinals.Week4Score</th>
-                                <th id="week5" class="week5">@cardinals.Week5Score</th>
-                                <th id="week6" class="week6">@cardinals.Week6Score</th>
+                                <th id="week1" class="week1">@teamId.Week1Points</th>
+                                <th id="week2" class="week2">@teamId.Week2Points</th>
+                                <th id="week3" class="week3">@teamId.Week3Points</th>
+                                <th id="week4" class="week4">@teamId.Week4Points</th>
+                                <th id="week5" class="week5">@teamId.Week5Points</th>
+                                <th id="week6" class="week6">@teamId.Week6Points</th>
                                 <th class="centered" rowspan="2">Arizona Cardinals</th>
                             </tr>
                         }
@@ -225,7 +225,7 @@
                             <td><input type="number" name="points" placeholder="Points"></td>
                             <td><input type="number" name="points" placeholder="Points"></td>
                         </tr>
-                        @foreach (var cowboys in Model.Cowboys)
+                        @*@foreach (var cowboys in Model.Cowboys)
                         {
                             <tr class="columns">
                                 <th>Player2</th>
@@ -355,7 +355,7 @@
                             <td><input type="number" name="points" placeholder="Points"></td>
                             <td><input type="number" name="points" placeholder="Points"></td>
                             <td><input type="number" name="points" placeholder="Points"></td>
-                        </tr>
+                        </tr>*@
                     </table>
                 </form>
             </div>
@@ -368,7 +368,7 @@
                 <span><input type="number" placeholder="Player 3 Total Points" /></span>
                 <span><input type="number" placeholder="Player 4 Total Points" /></span>
                 <span><input type="number" placeholder="Player 5 Total Points" /></span>
-                <button class="bottom-button" onclick="openLocation('/MergeModel/week7through12')">Week 7-12</button>
+                <button class="bottom-button" onclick="openLocation('/FantasyFootball/week7through12')">Week 7-12</button>
             </div>
             <div class="points">
                 <p>Points go as follows:</p>

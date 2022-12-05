@@ -16,11 +16,9 @@ namespace CRUDApp.Repositories
         {
             _dbContext = dbContext;
         }
-        public int Points()
+        public int Points(int playerGuess, int weeklyScore)
         {
             int points = 0;
-            int playerGuess = 0;
-            int weeklyScore = 0;
 
             if (playerGuess == weeklyScore + 14)
             {

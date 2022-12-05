@@ -6,21 +6,26 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace FantasySports.Models
 {
     public class FantasyFootballViewModel
     {
         private FantasyFootballRepository _repo;
+        public List<FantasyFootball> TeamList { get; set; }
+        public FantasyFootball CurrentPlayer { get; set; }
 
         public FantasyFootballViewModel(FantasySportsContext context)
         {
-            
+            _repo = new FantasyFootballRepository(context);
+            //TeamList = GetAllTeams();
+            //CurrentTeam = TeamList.FirstOrDefault();
         }
 
-        public int GetPoints()
+        public int GetPoints(int playerGuess, int weeklyScore)
         {
-            return _repo.Points();
+            return _repo.Points(playerGuess, weeklyScore);
         }
     }
 }

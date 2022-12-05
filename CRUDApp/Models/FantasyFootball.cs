@@ -51,25 +51,25 @@ namespace FantasySports.Models
     public class FantasyFootball
     {
         public int TeamId { get; set; }
-        public int? Week1Score { get; set; }
-        public int? Week2Score { get; set; }
-        public int? Week3Score { get; set; }
-        public int? Week4Score { get; set; }
-        public int? Week5Score { get; set; }
-        public int? Week6Score { get; set; }
-        public int? Week7Score { get; set; }
-        public int? Week8Score { get; set; }
-        public int? Week9Score { get; set; }
-        public int? Week10Score { get; set; }
-        public int? Week11Score { get; set; }
-        public int? Week12Score { get; set; }
-        public int? Week13Score { get; set; }
-        public int? Week14Score { get; set; }
-        public int? Week15Score { get; set; }
-        public int? Week16Score { get; set; }
-        public int? Week17Score { get; set; }
-        public int? Week18Score { get; set; }
+        public int? Week1Points { get; set; }
+        public int? Week2Points { get; set; }
+        public int? Week3Points { get; set; }
+        public int? Week4Points { get; set; }
+        public int? Week5Points { get; set; }
+        public int? Week6Points { get; set; }
+        public int? Week7Points { get; set; }
+        public int? Week8Points { get; set; }
+        public int? Week9Points { get; set; }
+        public int? Week10Points { get; set; }
+        public int? Week11Points { get; set; }
+        public int? Week12Points { get; set; }
+        public int? Week13Points { get; set; }
+        public int? Week14Points { get; set; }
+        public int? Week15Points { get; set; }
+        public int? Week16Points { get; set; }
+        public int? Week17Points { get; set; }
+        public int? Week18Points { get; set; }
+        public int? PlayerPoints { get; set; }
         public int? PlayerGuess { get; set; }
-        public int? PlayerGuessScore { get; set; }
     }
 }
