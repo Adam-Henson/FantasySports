@@ -1,5 +1,7 @@
 ﻿using CRUDApp.Context;
 using CRUDApp.Models;
+using FantasySports.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,18 @@ namespace CRUDApp.Repositories
         public FantasyFootballRepository(FantasySportsContext dbContext)
         {
             _dbContext = dbContext;
+        }
+        public List<FantasyFootball> GetAllTeams()
+        {
+            List<FantasyFootball> teamList = _dbContext.FantasyFootball.ToList();
+
+            return teamList;
+        }
+        public FantasyFootball GetTeamByID(int teamid)
+        {
+            FantasyFootball football = _dbContext.FantasyFootball.Find(teamid);
+
+            return football;
         }
         public int Points(int playerGuess, int weeklyScore)
         {

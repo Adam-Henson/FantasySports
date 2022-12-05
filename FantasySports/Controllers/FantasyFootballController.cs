@@ -27,6 +27,14 @@ namespace FantasySports.Controllers
 
             return View(model);
         }
+
+        public IActionResult TeamSelection()
+        {
+            FantasyFootballViewModel model = new FantasyFootballViewModel(_context);
+
+            return View(model);
+        }
+
         public IActionResult FantasyGame()
         {
             FantasyFootballViewModel model = new FantasyFootballViewModel(_context);

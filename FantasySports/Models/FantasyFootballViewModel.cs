@@ -19,13 +19,22 @@ namespace FantasySports.Models
         public FantasyFootballViewModel(FantasySportsContext context)
         {
             _repo = new FantasyFootballRepository(context);
-            //TeamList = GetAllTeams();
+            TeamList = GetAllTeams();
             //CurrentTeam = TeamList.FirstOrDefault();
         }
 
         public int GetPoints(int playerGuess, int weeklyScore)
         {
             return _repo.Points(playerGuess, weeklyScore);
+        }
+        public List<FantasyFootball> GetAllTeams()
+        {
+            return TeamList;
+            //return _repo.GetAllTeams();
+        }
+        public FantasyFootball GetTeam(int teamId)
+        {
+            return _repo.GetTeamByID(teamId);
         }
     }
 }

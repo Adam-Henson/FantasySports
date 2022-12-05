@@ -193,16 +193,16 @@
                             <th><button type="button" onclick="Week6()">Week 6</button></th>
                         </tr>
 
-                        @foreach (FantasyFootball teamId in Model.CurrentTeam)
+                        @foreach (FantasyFootball team in Model.TeamList)
                         {
                             <tr class="columns">
                                 <th>Player1</th>
-                                <th id="week1" class="week1">@teamId.Week1Points</th>
-                                <th id="week2" class="week2">@teamId.Week2Points</th>
-                                <th id="week3" class="week3">@teamId.Week3Points</th>
-                                <th id="week4" class="week4">@teamId.Week4Points</th>
-                                <th id="week5" class="week5">@teamId.Week5Points</th>
-                                <th id="week6" class="week6">@teamId.Week6Points</th>
+                                <th id="week1" class="week1">@team.Week1Points</th>
+                                <th id="week2" class="week2">@team.Week2Points</th>
+                                <th id="week3" class="week3">@team.Week3Points</th>
+                                <th id="week4" class="week4">@team.Week4Points</th>
+                                <th id="week5" class="week5">@team.Week5Points</th>
+                                <th id="week6" class="week6">@team.Week6Points</th>
                                 <th class="centered" rowspan="2">Arizona Cardinals</th>
                             </tr>
                         }
